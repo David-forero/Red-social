@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgShare</title>
+    {{!-- BOOTSTRAP --}}
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    {{!-- FONT AWESOME --}}
+    <link rel="stylesheet" href="/public/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Red social</a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">My count</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Exit</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-8">
+                {{{body}}}
+            </div>
+            <div class="col-md-4">
+                {{> status}}
+                {{> popular}}
+                {{> comments}}
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    {{!-- CUSTOM JS --}}
+    <script src="/public/js/scripts.js"></script>
+</body>
+
+</html>
